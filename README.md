@@ -2,9 +2,10 @@
 
 This repository contains three learning projects I completed while following a crash course on Go programming by freeCodeCamp.org. The three projects are:
 
-- `go-bookstore`: A simple web application that allows users to browse and purchase books.
+- `go-server`: A HTTP server handling simple GET and POST requests.
 - `go-movies-crud`: A CRUD (Create, Read, Update, Delete) web application that allows users to manage a list of movies.
-- `go-server`: A simple HTTP server that responds with a "Hello, World!" message.
+- `go-bookstore`: A web application with a mysql db that allows users to browse, edit, add, delete and purchase books.
+
 
 ## Getting Started
 
