@@ -1,0 +1,4 @@
+[air]
+main = "main.go"
+verbose = true
+
