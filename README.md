@@ -12,7 +12,7 @@ This repository contains three learning projects I completed while following a c
 To get started with these projects, first clone the repository to your local machine:
 
 ```
-git clone https://github.com/your-username/go-learning-projects.git
+git clone https://github.com/FONS127/go
 ```
 
 Each project is contained in its own directory (`go-bookstore`, `go-movies-crud`, and `go-server`). To run a project, navigate to its directory and run the `main.go` file using the `go run` command.
