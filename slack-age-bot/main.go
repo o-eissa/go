@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
 
 	"github.com/joho/godotenv"
 	"github.com/shomali11/slacker"
@@ -36,6 +37,21 @@ func main() {
 
 	go printCommandEvents(bot.CommandEvents())
 
+	bot.Command("My YOB is <year>", &slacker.CommandDefinition{
+		Description: "YOB Calculator",
+		// Example:     "My YOB is 2023",
+		Handler: func(botCtx slacker.BotContext, request slacker.Request, response slacker.ResponseWriter) {
+			year := request.Param("year")
+			yob, err := strconv.Atoi(year)
+			if err != nil {
+				println("Error converting string to int")
+			}
+			age := 2023 - yob
+			r := fmt.Sprintf("Your age is %d", age)
+			response.Reply(r)
+		},
+	})
+
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
@@ -43,5 +59,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	
+
 }
